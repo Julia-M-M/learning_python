@@ -108,13 +108,51 @@ print(type(negativo))
                     1 blank line    --> Separar los métodos de una clase
                                         Al final de cada archivo
                                         Separar la líneas de código que cumplen diferentes áreas
-                                        
 """
 
 
         ## ESTRUCTURAS DE DATOS ##
+"""
+    Tipos:
+        list = [element1, element2...]              --> ordenado, mutable y permite duplicados
+        tupl = (element1, element2...)              --> ordenado, no mutable y permite duplicados
+        diccionary = {key:value}                    --> no ordenado, mutable y no permite duplicados
+        set = {unique_element1, unique_element2...} --> no ordenado, mutable y no permite duplicados
+"""
+#Listas
+"""
+>>> lenguajes = ["python", "java", "golang"]
+>>> lenguajes
+['python', 'java', 'golang']
+>>> lista = [1, 2.0, True, "python", 1]
+>>> lista
+[1, 2.0, True, 'python', 1]
 
+>>> len(lenguajes) #list's length (n)
+3
+>>> lenguajes[0] #The first position in the list is 0
+'python'
+>>> lenguajes[-1] #En regresivo, la última posición es -1
+'golang'
+>>> lenguajes[-3] #En regresivo, la primera posición es -n
+'python'
+>>> lenguajes[0:2] #Nos da de la primera(0) a la posición antes de la tercera(2)    --> list[a:b]   where   a = 1st position we want
+                                                                                                            b = position after the las one we want
+['python', 'java']
 
+>>> programacion = [lenguajes, "dedicacion", "practica"] #Nested lists --> las listas se pueden anidar (una lista dentro de la otra)
+>>> programacion
+[['python', 'java', 'golang'], 'dedicacion', 'practica']
+>>> programacion[0][0] #Para obtener, del primer elemento(lista "programacion"), el primer elemento("python")
+'python'
+
+>>> lenguajes[0]="dart" #Modificar un elemento de la lista
+>>> lenguajes
+['dart', 'java', 'golang']
+>>> lenguajes.append("python") #Añadir un elemento a la última posición de la lista
+>>> lenguajes
+['dart', 'java', 'golang', 'python']
+"""
 
 
         ## CONDICIONES Y CICLOS ##
