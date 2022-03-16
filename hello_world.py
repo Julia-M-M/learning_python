@@ -25,3 +25,78 @@ print(type(estatura))
 print(type(positivo))
 print(type(negativo))
 
+
+        ## OPERADORES MATEMÁTICOS ##
+""" 
+    >>> 2+1 #Suma
+    3
+    >>> 2-1 #Resta
+    1
+    >>> 2*2 #Multiplicación
+    4
+    >>> 4/2 #División
+    2.0
+    >>> 5%2 #Módulo: residuo de la división 5/2
+    1 
+    >>> 3**2 #Potencia
+    9
+    
+    >>> "texto1"+"texto2" #Concatenar texto
+    'texto1texto2'
+    >>> "texto"*3 #Repetir texto
+    'textotextotexto'
+   
+   #Comparaciones
+    >>> 1>2
+    False
+    >>> 1<2
+    True
+    >>> 1>=2
+    False
+    >>> 1<=2
+    True
+    >>> 1==2
+    False
+    >>> 1!=2
+    True
+
+    >>> "texto" == "texto"
+    True
+    >>> "texto" != "Texto"
+    True
+"""
+
+
+        ## BUITL-IN FUNCTIONS ##
+"""
+    Funciones ya definidas en Python: function()
+    Por ejemplo:
+        print()
+        help() --> Retorna la documentacuón de una función
+        int() --> Convierte cualquier valor a un número entero truncándolo
+            >>> int(3.23)
+            3
+            >>> int(3.73)
+            3
+        float() --> Convierte un número entero a uno florante
+            >>> float(3)
+            3.0
+        str() --> Convierte cualquier tipo de variable a un string
+            >>> str(True)
+            'True'
+            >>> str(3.4)
+            '3.4'
+        type() --> Retorna el tipo de una variable u objeto
+            >>> type(True)
+            <class 'bool'>
+            >>> type(Hello world)
+            File "<stdin>", line 1
+                type(Hello world)
+                        ^
+            SyntaxError: invalid syntax
+            >>> type("Hello world")
+            <class 'str'>
+"""
+
+
+        ## PEP8 -- Style Guide for Python Code ##
