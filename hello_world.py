@@ -100,3 +100,47 @@ print(type(negativo))
 
 
         ## PEP8 -- Style Guide for Python Code ##
+"""
+    www.python.org/dev/peps/pep-0008
+    Indentation: 4 spaces per indentation level (bloque de código)
+    Maximum line length: 79 characters
+    Blank lines:    2 blank lines   --> Para separar funciones o clases
+                    1 blank line    --> Separar los métodos de una clase
+                                        Al final de cada archivo
+                                        Separar la líneas de código que cumplen diferentes áreas
+                                        
+"""
+
+
+        ## ESTRUCTURAS DE DATOS ##
+
+
+
+
+        ## CONDICIONES Y CICLOS ##
+
+
+
+
+        ## FUNCIONES ##
+
+
+
+
+        ## MÓDULOS ##
+
+
+
+
+        ## PROGRAMACIÓN ORIENTADA A OBJETOS ##
+
+
+
+
+        ## AMBIENTES VIRTUALES ##
+
+
+
+
+        ## ERROR Y EXCEPCIONES ##
+
