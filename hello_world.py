@@ -116,10 +116,10 @@ print(type(negativo))
     Tipos:
         list = [element1, element2...]              --> ordenado, mutable y permite duplicados
         tuple = (element1, element2...)              --> ordenado, no mutable y permite duplicados
-        diccionary = {key:value}                    --> no ordenado, mutable y no permite duplicados
+        dictionary = {key:value}                    --> no ordenado, mutable y no permite duplicados
         set = {unique_element1, unique_element2...} --> no ordenado, mutable y no permite duplicados
 """
-#Listas
+#Listas / LISTS
 """
 >>> lenguajes = ["python", "java", "golang"]
 >>> lenguajes
@@ -160,7 +160,7 @@ print(type(negativo))
 ['dart', 'java', 'golang', 'python', 'c', 'c++']
 """
 
-#Tuplas --> Listas inmutables
+#Tuplas / TUPLES --> Listas inmutables
 """
 >>> lenguajes = ("python", "c", "c++")
 >>> lenguajes
@@ -178,7 +178,14 @@ Traceback (most recent call last):
 TypeError: 'tuple' object does not support item assignment
 """
 
-#
+#Diccionarios / DICTIONARIES
+"""
+"""
+
+#SETS
+"""
+"""
+
 
         ## CONDICIONES Y CICLOS ##
 
