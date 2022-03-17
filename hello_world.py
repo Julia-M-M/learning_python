@@ -246,7 +246,37 @@ set()
 
         ## CONDICIONES Y CICLOS ##
 
+#Condiciones
+"""
+Instrucción que se ejecuta o no al cumplirse una condición
 
+Dependen de una condición lógica y se usan para comparar
+    Igual ==
+    Diferente !=
+    Menor <
+    Mayor >
+    Menor o igual que <=
+    Mayor o igual que >=
+Obtenemos en retorno una variable booleana (True/False)
+
+Expresiones condicionales
+    is --> validar si dos variables se refieren al mismo objeto (retorna True/False)
+    and --> unir dos condiciones. Retorna True si ambas son True, retorna False si una condición es False
+    or --> unir dos condiciones. Retorna True si una es True, retorna False si ambas son False
+    not --> retorna True si el valor es False. Verificar si un elemento está o no contenido en una lista o estructura de datos
+
+if<condición lógica>:
+    print("If block")
+elif<condición lógica>:
+    print("Elif block")
+else:
+    print("Else block")
+"""
+
+#Ciclos
+"""
+
+"""
 
 
         ## FUNCIONES ##
