@@ -578,7 +578,87 @@ hora_actual
 
         ## PROGRAMACIÓN ORIENTADA A OBJETOS ##
 
+class Persona:  #Definir una Clase
+    def __init__(self): #SIEMPRE DEBE ESTAR
+        print("Estoy en el constructor")
 
+pedro = Persona()
+print(type(pedro))
+
+paco = Persona()
+print(type(paco))
+
+print(pedro == paco)    #False porque son objetos del mismo tipo (Personas) pero no el mismo objeto
+
+
+class Persona:  
+    atributo = 123  #Para todos los objetos de la clase
+    def __init__(self, nombre, edad): #Atributos de instancia siempre dentro de __init__
+        self.nombre = nombre
+        self.edad = edad
+
+paco = Persona("Paco", 20)
+
+print(paco.nombre)
+print(paco.edad)
+print(paco.atributo)
+
+
+class Persona:  
+    def __init__(self, nombre, edad): 
+        self.nombre = nombre
+        self.edad = edad
+
+    def cumplir_años(self):
+        self.edad += 1
+        print(f"Feliz cumpleaños #{self.edad}, {self.nombre}")
+
+paco = Persona(nombre="Paco", edad=20)
+
+paco.cumplir_años()
+
+
+#HERENCIA de clases
+class Persona:  #Clase PADRE
+    def __init__(self, nombre, edad): 
+        self.nombre = nombre
+        self.edad = edad
+
+    def cumplir_años(self):
+        self.edad += 1
+        print(f"Feliz cumpleaños #{self.edad}, {self.nombre}")
+
+class Empleado(Persona):    #Clase HIJO
+    def trabajar(self, horas_trabajadas):
+        print(f"Usted ha trabajado {horas_trabajadas} horas")
+
+paco = Empleado(nombre="Paco", edad=20)
+paco.trabajar(horas_trabajadas=8)
+paco.cumplir_años()
+
+
+class Persona:  #Clase PADRE
+    def __init__(self, nombre, edad): 
+        self.nombre = nombre
+        self.edad = edad
+
+    def cumplir_años(self):
+        self.edad += 1
+        print(f"Feliz cumpleaños #{self.edad}, {self.nombre}")
+
+class Empleado(Persona):    #Clase HIJO
+    def __init__(self, horas_totales, nombre, edad):
+        super(Empleado, self).__init__(nombre,edad) #Para mantener los atributos de la clase padre y no sobreescribirlos con la línea anterior
+        self.horas_totales = horas_totales
+    
+    def trabajar(self, horas_trabajadas):
+        self.horas_totales += horas_trabajadas
+        print(f"Usted ha trabajado {horas_trabajadas} horas")
+        print(f"Horas totales: {self.horas_totales} horas")
+
+paco = Empleado(nombre="Paco", edad=20, horas_totales=30)
+paco.trabajar(horas_trabajadas=8)
+paco.cumplir_años()
 
 
         ## AMBIENTES VIRTUALES ##
