@@ -178,12 +178,69 @@ Traceback (most recent call last):
 TypeError: 'tuple' object does not support item assignment
 """
 
-#Diccionarios / DICTIONARIES
+#Diccionarios / DICTIONARIES --> Almacenan datos en pares de datos llamados llave y valor (cada valor es un elemento que corresponde a una llave)
 """
+>>> lenguaje = {
+... "nombre":"python",
+... "creador":"Guido"
+... }
+>>> lenguaje
+{'nombre': 'python', 'creador': 'Guido'}
+
+>>> lenguaje["nombre"]
+'python'
+>>> lenguaje["año_lanzamiento"]=1991 #Se pueden añadir llaves
+>>> lenguaje
+{'nombre': 'python', 'creador': 'Guido', 'año_lanzamiento': 1991}
+>>> lenguaje["año_lanzamiento"]=1999 #Y se peuden modificar los valores de la llave, pero no se pueden duplicar las llaves
+>>> lenguaje
+{'nombre': 'python', 'creador': 'Guido', 'año_lanzamiento': 1999}
+
+>>> lenguaje["caracteristicas"]=["sencillo", "facil", "genial"]
+>>> lenguaje
+{'nombre': 'python', 'creador': 'Guido', 'año_lanzamiento': 1999, 'caracteristicas': ['sencillo', 'facil', 'genial']} #   Llave = texto      Valor = cualquier tipo (texto, lista...)
+
+>>> lenguaje.items()
+dict_items([('nombre', 'python'), ('creador', 'Guido'), ('año_lanzamiento', 1999), ('caracteristicas', ['sencillo', 'facil', 'genial'])])
+>>> lenguaje.keys()
+dict_keys(['nombre', 'creador', 'año_lanzamiento', 'caracteristicas'])
+>>> lenguaje.values()
+dict_values(['python', 'Guido', 1999, ['sencillo', 'facil', 'genial']])
 """
 
-#SETS
+#SETS --> Permite guardar elementos únicos
 """
+>>> set1 = {1,2,3}
+>>> set1
+{1, 2, 3}
+>>> set1[2] #No es un elemento ordenado, así que no se puede imprimir una posición
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'set' object is not subscriptable
+>>> set2 = {1,1,1,2,3} #No permite duplicados
+>>> set2 
+{1, 2, 3}
+>>> set3 = {1,2.0,"texto"} #Permite texto y números flotantes
+>>> set3
+{1, 2.0, 'texto'}
+
+>>> set1.add(4) #Añadir elementos al set
+>>> set1
+{1, 2, 3, 4}
+>>> set1.update([4,5,6]) #Añadir elementos al set
+>>> set1
+{1, 2, 3, 4, 5, 6}
+>>> len(set1) #Saber la longitud del set
+6
+>>> set1.discard(2) #Eliminar elementos del set
+>>> set1
+{1, 3, 4, 5, 6}
+>>> set1.remove(3) #Eliminar elementos del set
+>>> set1
+{1, 4, 5, 6}
+>>> set1.clear() #Eliminar todos los elementos del set
+>>> set1
+set()
 """
 
 
