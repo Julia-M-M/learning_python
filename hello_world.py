@@ -115,7 +115,7 @@ print(type(negativo))
 """
     Tipos:
         list = [element1, element2...]              --> ordenado, mutable y permite duplicados
-        tupl = (element1, element2...)              --> ordenado, no mutable y permite duplicados
+        tuple = (element1, element2...)              --> ordenado, no mutable y permite duplicados
         diccionary = {key:value}                    --> no ordenado, mutable y no permite duplicados
         set = {unique_element1, unique_element2...} --> no ordenado, mutable y no permite duplicados
 """
@@ -149,11 +149,36 @@ print(type(negativo))
 >>> lenguajes[0]="dart" #Modificar un elemento de la lista
 >>> lenguajes
 ['dart', 'java', 'golang']
->>> lenguajes.append("python") #Añadir un elemento a la última posición de la lista
+>>> lenguajes.append("python") #append --> Añadir un elemento a la última posición de la lista como un solo elemento
 >>> lenguajes
 ['dart', 'java', 'golang', 'python']
+>>> otros_lenguajes = ["c", "c++"]
+>>> otros_lenguajes
+['c', 'c++']
+>>> lenguajes.extend(otros_lenguajes) #extend --> Añadir por separado los elementos de un elemento a la última posición de la lista
+>>> lenguajes
+['dart', 'java', 'golang', 'python', 'c', 'c++']
 """
 
+#Tuplas --> Listas inmutables
+"""
+>>> lenguajes = ("python", "c", "c++")
+>>> lenguajes
+('python', 'c', 'c++')
+>>> lenguajes1 = "python", "c", "c++" #Si no ponemos () ni [], interpreta que es una tupla
+>>> lenguajes1
+('python', 'c', 'c++')
+>>> lenguajes[1]
+'c'
+>>> lenguajes[-1]
+'c++'
+>>> lenguajes[0] = "java" #Inmutable, es decir, no se puede modificar
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'tuple' object does not support item assignment
+"""
+
+#
 
         ## CONDICIONES Y CICLOS ##
 
