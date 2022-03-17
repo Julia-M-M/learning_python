@@ -482,6 +482,7 @@ def <nombre_funcion>(parámetro, argumento):
 
 <nombre_funcion>  
 """
+
 def perimetro_cuadrado(lado):
     """Calcular el perímetro de un cuadrado  
     
@@ -500,9 +501,79 @@ def perimetro_cuadrado(lado):
 perimetro = perimetro_cuadrado(lado=5)  
 
 
-        ## MÓDULOS ##
+        ## MÓDULOS y PAQUETES/LIBRERIAS##
+"""
+Los PAQUETES (o librerías) son carpetas que contienen MÓDULOS que, a su vez, contienen una o varias FUNCIONES
+"""
+import datetime #Importar librería
+hora_actual = datetime.datetime.now()
+hora_actual
+
+import datetime as dt   #Importar librería con un alias
+hora_actual = dt.datetime.now()
+hora_actual
+
+from datetime import datetime   #Importar un submódulo de una librería
+hora_actual = datetime.now()
+hora_actual
+
+#Crear un módulo:
+    #1 Crear el módulo en un archivo llamado cuadrado.py:
+        def perimetro_cuadrado(lado):
+            return lado*4    
+
+        def area_cuadrado(lado):
+            return lado*lado
+    #2 Importar las funciones a un nuevo archivo llamado main.py:
+        from cuadrado import area_cuadrado, perimetro_cuadrado
+
+        lado = 5
+        cuadrado = {
+            "lado": lado,
+            "area": area_cuadrado(lado),
+            "perimetro": perimetro_cuadrado(lado)
+        }
+        
+        print(cuadrado)
+
+        perimetro = perimetro_cuadrado(lado)
+        print(perimetro)
 
 
+#Crear un paquete/librería
+    #1 Crear una carpeta llamada "figuras"
+    #2 Crear un archivo llamado __init__.py --> Se deja vacío
+    #3 Se le añade o crea un archivo con el módulo cuadrado.py
+        def area_cuadrado(lado):
+            return lado * lado
+
+        def perimetro_cuadrado(lado):
+            return lado * 4
+    #4 Crear un nuevo módulo llamado circulo.py
+        def area_circulo(radio):
+            return 3.14 * radio * radio
+
+        def perimetro_circulo(radio):
+            return 3.14 * 2 * radio
+    #5 Crear el archivo principal main.py fuera de la carpeta figuras
+        from figuras.cuadrado import area_cuadrado, perimetro_cuadrado
+        from figuras.circulo import area_circulo, perimetro_circulo
+
+        lado = 4
+        cuadrado = {
+            "lado": lado,
+            "area": area_cuadrado(lado),
+            "perimetro": perimetro_cuadrado(lado)
+        }
+        print("Cuadrado", cuadrado)
+
+        radio = 5
+        circulo = {
+            "radio": radio,
+            "area": area_circulo(radio),
+            "perimetro": perimetro_circulo(radio)
+        }
+        print("Círculo", circulo)
 
 
         ## PROGRAMACIÓN ORIENTADA A OBJETOS ##
