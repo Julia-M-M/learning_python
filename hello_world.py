@@ -265,22 +265,141 @@ Expresiones condicionales
     or --> unir dos condiciones. Retorna True si una es True, retorna False si ambas son False
     not --> retorna True si el valor es False. Verificar si un elemento está o no contenido en una lista o estructura de datos
 
-if<condición lógica>:
+if<condición lógica>:   #Condición principal
     print("If block")
-elif<condición lógica>:
+elif<condición lógica>: #"Si no", si se incumple una condición del bloque if
     print("Elif block")
-else:
+else:                   #Si ninguna de las condiciones anteriores se cumple
     print("Else block")
 """
 
+a = 2
+b = 2
+
+if a < b:
+    print("A es menor que B")
+elif a == b:
+    print("A es igual a B")
+else:
+    print("A es mayor que B")
+
+
+c = False
+
+if c:
+    print("C es Verdadero")
+else:
+    print("C es Falso")
+
+
+if type(c) is bool:
+    print("C es Booleano")
+else:
+    print("C es otro tipo de dato")
+
+
+d = 10
+e = 5
+f = 1
+
+if d>e and e>f:
+    print("Las dos condiciones son verdaderas")
+
+
+for letra in "Texto":
+    print(letra)
+
+
+lenguajes = ["python", "java", "golang"]
+for elemento in lenguajes:
+    print(elemento)
+    if elemento == "java":
+        break               #Si no ponemos el IF, BREAK rompe después del primer elemento
+
+lenguajes = ["python", "java", "golang"]
+for elemento in lenguajes:
+    if elemento == "java":  #Si el elemento es java,
+        continue            #sáltate este elemento y
+    print(elemento)         #sigue con el siguiente elemento de la lista
+
+
+for element in range(5):    #El rango va de 0-4
+    print(element)
+
+for element in range(1,5):  #El rango va de 1-4
+    print(element)
+
 #Ciclos
 """
+Instrucciones que se repiten hasta que se cumple una condición
 
+Tipos:
+    For
+    While
+
+for <element> in <object>    #Repetir la instrucción para cada elemento del objeto sobre el que vamos a iterar
+    print("Elemento:"<element>)
+
+while <condición>:
+    print("Ciclo While")
 """
+
+i = 1
+while i<=5:     #Mientras el valor de i sea menor o igual a 5,
+    print(i)    #imprime el valor de i y
+    i += 1      #súmale 1
+                #Vuelve a empezar
+
+i = 1
+while i<=5:     
+    print(i)    
+    i += 1  
+    if i == 3:
+        break   #Romper el ciclo
+
+
+lenguajes = ["python", "java", "golang"]
+for elemento in lenguajes:
+    print(elemento)
+
+lenguajes = ["python", "java", "golang"]
+for index in range(len(lenguajes)):         #Para cada índice del rango de longitud de la lista "lenguajes"
+    print("Índice", index)                  #imprime la palabra "Índice" y el índice del rango (número)
+    print("Elemento:", lenguajes[index])    #seguido imprime la palabra "Elemento:" y el índice de la lista (lenguaje)
+
+lenguajes = ["python", "java", "golang"]
+i = 0   #contador de la lista "lenguajes", que empieza en 0
+while i<len(lenguajes): #Mientras el contador sea menor a la longitud de la lista,
+    print(lenguajes[i]) #imprimir el lenguaje de esa posición de la lista
+    i+=1                #y sumarle 1 al contador
+
+
+lenguaje = {
+    "Nombre": "Python",
+    "Creador": "Guido van Rossum"
+}
+for llave in lenguaje:
+    print("Llave:", llave)
+    print("Valor:", lenguaje[llave])
+
+lenguaje = {
+    "Nombre": "Python",
+    "Creador": "Guido van Rossum"
+}
+for elemento in lenguaje.keys():
+    print(elemento)
+for elemento in lenguaje.values():
+    print(elemento)
+for elemento in lenguaje.items():       #Imprime los elementos en TUPLAS
+    print(elemento)
+for llave, valor in lenguaje.items():   #Imprime los elementos por separado
+    print(llave, valor)
 
 
         ## FUNCIONES ##
+"""
 
+"""
 
 
 
