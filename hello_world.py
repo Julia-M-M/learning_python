@@ -666,6 +666,8 @@ paco.cumplir_años()
 Se pueden encontrar en https://pypi.org/
 
 Instalar/actualizar librerías --> pip
+
+virtualenv --> Sirve para crear ambiente diferentes para cada proyecto (así las librerías necesarias sólo se instalan en ese ambiente)
 """
 
 
