@@ -662,8 +662,11 @@ paco.cumplir_años()
 
 
         ## AMBIENTES VIRTUALES ##
+"""
+Se pueden encontrar en https://pypi.org/
 
-
+Instalar/actualizar librerías --> pip
+"""
 
 
         ## ERROR Y EXCEPCIONES ##
